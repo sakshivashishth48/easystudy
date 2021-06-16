@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyStudy</title>
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+
+            <div class="logo"><img src="https://i.pinimg.com/736x/d9/20/52/d920527f39800943d9fc5f5264acc866.jpg" alt="logo"></div>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#More">More</a></li>
+            <li><a href="#ContactUs">ContactUs</a></li>
+        </ul>
+        <div class="rightNav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+    </nav>
+
+    <hr>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+        }
+        
+        .nav-list {
+            background-color: black;
+            width: 41%;
+            /* background-color: black; */
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-list li {
+            list-style: none;
+            padding: 20px 34px;
+        }
+        
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .rightNav {
+            background-color: black;
+            /* background-color: blueviolet; */
+            width: 61%;
+            text-align: right;
+        }
+        
+        .logo img {
+            width: 70%;
+            border: 3px solid rgb(238, 241, 243);
+            border-radius: 50px;
+            padding: 1px;
+            align-content: center;
+        }
+        
+        .nav-list li a:hover {
+            color: gray;
+            text-decoration: none;
+        }
+        
+        #search {
+            padding: 20px;
+            font-size: 18px;
+            border: 2px solid gray;
+            border-radius: 9px;
+        }
+        
+        .background {
+            background: rgb(58, 58, 58) url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh88UQE8YFbfunaV_l-Ch2PdBVLH6ZDG_S4njMwq8E0rFy7ZKBdlUxna24jxed5B0PkgU&usqp=CAU');
+            background-size: cover;
+            background-blend-mode: brighten;
+        }
+        
+        .firstsection {
+            height: 100vh;
+        }
+        
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: citytype;
+            box-sizing: border-box;
+        }
+        
+        header {
+            padding: 15px;
+            font-size: 16px;
+            color: whitesmoke;
+        }
+        
+        header ul li {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        header ul li button {
+            background-color: #9b9b98fb;
+            color: rgb(23, 24, 10);
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+        
+        header span {
+            text-align: center;
+        }
+        
+        .option:select {
+            font-size: 16px;
+        }
+        
+        main {
+            text-align: center;
+            padding: 180px;
+        }
+        
+        main p {
+            font-size: 35px;
+            color: rgb(29, 27, 27);
+        }
+        
+        main button {
+            background-color: white;
+            color: rgb(10, 10, 10);
+            padding: 10px 30px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+        
+        main button hover {
+            font-size: 22px;
+        }
+        
+        main ul li button {
+            padding: 5px 10px;
+            margin-left: 15px;
+            display: block;
+        }
+        
+        main ul li button:hover {
+            font-size: 22px;
+        }
+        
+        .section {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: 80%;
+            margin: auto;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        .section-left {
+            flex-direction: row-reverse;
+        }
+        
+        .thumbnail img {
+            width: 256px;
+            border: 2px solid grey;
+            border-radius: 20px;
+        }
+        
+        .para {
+            padding: 0px 65px;
+        }
+        
+        .sectionTag {
+            font-size: 35px;
+            padding: 7px;
+        }
+        
+        .sectionSubTag {
+            font-size: 19px;
+            padding: 7px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .ContactUs {
+            background-color: rgb(243, 231, 215);
+            height: 833pxvh;
+        }
+        
+        .text-center {
+            text-align: center;
+            padding: 30px;
+            font-family: fangsong;
+            font-size: 35px;
+        }
+        
+        .form {
+            max-width: 344px;
+            margin: 12px auto;
+        }
+        
+        .form input {
+            padding: 6px 3px;
+            margin: 20px 0;
+            width: 100%;
+            font-size: 19px;
+            border: 2px solid gery;
+            border-radius: 6px;
+        }
+        
+        .btn-dark {
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        .text-footer {
+            background-color: black;
+            text-align: center;
+            padding: 30px;
+            font-family: fangsong;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .burger {
+            position: absolute;
+            cursor: pointer;
+            right: 4%;
+            top: 15px;
+        }
+        
+        .line {
+            width: 33px;
+            background-color: rgb(12, 12, 12);
+            height: 4px;
+            margin: 5px 5px;
+            padding: 2px;
+            border-radius: 5%;
+        }
+        
+        @media only screen and (max-width:1140px) {
+            .nav-list {
+                flex-direction: column;
+            }
+            .navbar {
+                flex-direction: column;
+            }
+            .rightNav {
+                text-align: center;
+            }
+            .logo img {
+                align-items: center;
+            }
+            #search {
+                width: 50%
+            }
+            .burger {
+                display: block;
+            }
+        }
+    </style>
+    <section class="background firstsection">
+        <divv class="box-main">
+            <div class="firsthalf">
+                <header>
+
+
+
+                    <ul>
+                        <li><a href="#"><button>SEMESTER</button></a></li>
+
+                        <select name="Sem" id="Sem">Semester
+                            <option value="-SELECT-">-SELECT-</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                            <option value="4">IV</option>
+                            <option value="5">V</option>
+                            <option value="6">VI</option>
+                            <option value="7">VII</option>
+                            <option value="8">VIII</option>
+                        </select>
+
+                        <li><a href="#"><button>SUBJECT</button></a></li>
+
+                        <select name="Sub" id="Sub">Subject
+                            <option value="-SELECT-">-SELECT-</option>
+                                     <!-- FIRST SEMESTER -->
+                                     <div class="Semester1">
+                            <option value="Applied Mathematics-I">Applied Mathematics-I</option>
+            
+                            <option value="Applied Physics-I">Applied Physics-I</option>
+            
+                            <option value="Manufacturing Processes">Manufacturing Processes</option>
+            
+                            <option value="Electrical Technology">Electrical Technology</option>
+            
+                            <option value="Human Values and Professional Ethics-I">Human Values and Professional Ethics-I</option>
+            
+                            <option value="Fundamentals of Computing">Fundamentals of Computing</option>
+            
+                            <option value="Applied Chemistry">Applied Chemistry</option>
+                        </div>
+            
+                                     <!-- SECOND SEMESTER -->
+                            
+                          <div class="Semester2">
+                            <option value="Applied Mathematics-II">Applied Mathematics-II</option>
+            
+                            <option value="Applied Physics-II">Applied Physics-II</option>
+            
+                            <option value="Electronic Devices">Electronic Devices</option>
+            
+                            <option value="Introduction to Programming">Introduction to Programming</option>
+            
+                            <option value="Engineering Mechanics">Engineering Mechanics</option>
+            
+                            <option value="Communication Skills">Communication Skills</option>
+            
+                            <option value="Environmental Studies">Environmental Studies</option>
+                            </div>
+            
+                                     <!-- THIRD SEMESTER -->
+                            <div class="Semester3">
+                          
+                            <option value="Applied Mathematics-III">Applied Mathematics-III</option>
+            
+                            <option value="Analog Electronics-I">Analog Electronics-I</option>
+            
+                            <option value="Switching Theory and Logic Design">Switching Theory and Logic Design</option>
+            
+                            <option value="Electronic Instruments and
+                            Measurements">Electronic Instruments and
+                            Measurements</option>
+            
+                            <option value="Data Structures">Data Structures</option>
+            
+                            <option value="Signals and Systems">Signals and Systems</option>
+                        </div>
+                            
+                                     <!-- FOURTH SEMESTER -->
+                            
+                          <div class="Semester4">
+                            <option value="Applied Mathematics–IV">Applied Mathematics–IV</option>
+            
+                            <option value="Analog Electronics-II">Analog Electronics-II</option>
+            
+                            <option value="Network Analysis and Synthesis">Network Analysis and Synthesis</option>
+            
+                            <option value="Communication Systems">Communication Systems</option>
+            
+                            <option value="Electromagnetic Field Theory">Electromagnetic Field Theory</option>
+            
+                            <option value="Computer Organization and Architecture">Computer Organization and Architecture</option>
+                        </div>
+                            
+                                     <!-- FIFTH SEMESTER -->
+                            
+                          <div class="Semester5">
+                            <option value="Communication Skills for Professionals">Communication Skills for Professionals</option>
+            
+                            <option value="Digital Communication">Digital Communication</option>
+            
+                            <option value="Microprocessors and Microcontrollers">Microprocessors and Microcontrollers</option>
+            
+                            <option value="Control Systems">Control Systems</option>
+            
+                            <option value="Digital System Design">Digital System Design</option>
+            
+                            <option value="Industrial Management">Industrial Management</option>
+                        </div>
+                            
+                                     <!-- SIXTH SEMESTER -->
+                            
+                          <div class="Semester6">
+                            <option value="Microwave Engineering">Microwave Engineering</option>
+            
+                            <option value="Information Theory and Coding">Information Theory and Coding</option>
+            
+                            <option value="Digital Signal Processing">Digital Signal Processing</option>
+            
+                            <option value="VLSI Design">VLSI Design</option>
+            
+                            <option value="Data Communication and Networks">Data Communication and Networks</option>
+            
+                            <option value="Antenna and Wave Propagation">Antenna and Wave Propagation</option>
+                        </div>
+                            
+                                     <!-- SEVENTH SEMESTER -->
+                            <div class="Semester7">
+                          
+                            <option value="Embedded Systems">Embedded Systems</option>
+            
+                            <option value="Optoelectronics and Optical
+                            Communication">Optoelectronics and Optical
+                            Communication</option>
+                        </div>
+                            <!-- REST OF THE SUBJECTS ARE ELECTIVE -->
+                            
+                            
+                                     <!-- EIGHTH SEMESTER -->
+                            
+                            <div class="Semester8"></div>
+                            <option value="Human Values and Professional Ethics-II">Human Values and Professional Ethics-II</option>
+            
+                            <option value="Satellite Communication">Satellite Communication</option>
+            
+                            <option value="Ad Hoc and Sensor Networks">Ad Hoc and Sensor Networks</option>
+                             </select>
+
+                        <li><a href="#"><button>UNIT</button></a></li>
+
+                        <select name="Unit" id="Unit">Unit
+                            <option value="-SELECT-">-SELECT-</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                            <option value="4">IV</option>
+                        </select>
+                    </ul>
+                </header>
+
+                <main>
+                    <p>Start learning now</p>
+                    <button>EasyStudy </button>
+
+
+            </div>
+            </div>
+    </section>
+    <section class="section">
+        <div class="para">
+            <p class="sectionTag ">About EasyStudy</p>
+            <p class="sectionSubTag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eum praesentium voluptatibus quas nobis quaerat ipsa enim, dolores at assumenda, velit ipsum non laborum soluta in! Perspiciatis accusamus voluptates labore nam autem assumenda
+                esse enim! Dolorum recusandae fugiat facere vitae, dolorem ipsa iure cum dolore porro
+        </div>
+
+
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/1600x900/?coding,apple">
+        </div>
+    </section>
+    <section class="section section-left">
+        <div class="para">
+            <p class="sectionTag ">SERVICES</p>
+            <p class="sectionSubTag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eum praesentium voluptatibus quas nobis quaerat ipsa enim, dolores at assumenda, velit ipsum non laborum soluta in! Perspiciatis accusamus voluptates labore nam autem assumenda
+                esse enim! Dolorum recusandae fugiat facere vitae, dolorem ipsa iure cum dolore porro
+        </div>
+
+
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/1600x900/?webdev,laptop">
+        </div>
+    </section>
+    <section class="section">
+        <div class="para">
+            <p class="sectionTag">DETAILS</p>
+            <p class="sectionSubTag ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eum praesentium voluptatibus quas nobis quaerat ipsa enim, dolores at assumenda, velit ipsum non laborum soluta in! Perspiciatis accusamus voluptates labore nam autem assumenda
+                esse enim! Dolorum recusandae fugiat facere vitae, dolorem ipsa iure cum dolore porro
+        </div>
+
+
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/1600x900/?network,laptop">
+        </div>
+    </section>
+
+    <section class="ContactUs">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="form">
+
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone number">
+            <input type="emial" name="name" id="email" placeholder="Enter your email">
+            <button class="btn btn-sm btn-dark">Submit</button>
+        </div>
+
+
+    </section>
+    <footer class="background">
+        <p class="text-footer">
+            copyright &copy;2025-All Rights Reserved
+        </p>
+    </footer>
+    <script>
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
